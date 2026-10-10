@@ -1,0 +1,15 @@
+<?php
+
+namespace App\Controllers;
+
+class About extends BaseController
+{
+    public function index(): string
+    {
+        return view('about', [
+            'title'  => 'About',
+            'active' => 'about',
+            'dev'    => config('Developer'),
+        ]);
+    }
+}
